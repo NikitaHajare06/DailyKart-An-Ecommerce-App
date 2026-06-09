@@ -1,0 +1,20 @@
+<nav class="navbar navbar-dark bg-dark px-3">
+
+  <a class="navbar-brand text-white">
+    E-Commerce App
+  </a>
+
+  <div class="d-flex gap-2">
+    <a *ngIf="isLoggedIn" routerLink="/cart" class="btn btn-warning">
+      Cart
+    </a>
+
+    <a *ngIf="!isLoggedIn" routerLink="/login" class="btn btn-light">
+      Login
+    </a>
+    <button *ngIf="isLoggedIn" (click)="logout()" class="btn btn-danger">
+      Logout
+    </button>
+  </div>
+
+</nav>
